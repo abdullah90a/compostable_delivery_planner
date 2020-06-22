@@ -1,0 +1,149 @@
+/*body {*/
+/*  background-color: #fcfaf7!important;*/
+/*}*/
+
+#map_id {
+  height: 825px;
+  width: 100%;
+}
+
+.info {
+  padding: 6px 8px;
+  font: 14px/16px Arial, Helvetica, sans-serif;
+  background: white;
+  background: rgba(255,255,255,0.8);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 5px;
+}
+
+.legend {
+  height: 50rem;
+  overflow-y: hidden;
+}
+
+.be-box-shadow-right {
+  box-shadow: 12px 12px 18px 0px rgba(0,0,0,0.07);
+}
+
+.be-btn-green-then-blue {
+  width: 100%;
+  background-color: #bddc04 !important;
+  border-color: #bddc04 !important;
+  transition: background-color .5s;
+  transition: border-color .5s;
+}
+
+.be-btn-green-then-blue:hover {
+  background-color: #8ac9ed !important;
+  border-color:  #8ac9ed !important;
+}
+
+.card-image-size {
+  height: 12rem;
+}
+
+.be-new-and-map-control-height {
+  height: 50rem;
+}
+
+/* JQuery auto-complete dropdown style override */
+.ui-autocomplete {
+  height: 10rem;
+  overflow-y: scroll;
+}
+
+.center-carousel-text {
+  text-align: center;
+}
+
+.whole-padding{
+  padding-top: 2rem;
+}
+
+.transparent-card {
+  background-color: transparent !important;
+  margin: 0.5rem;
+}
+
+.be-card {
+  cursor: pointer !important;
+  background-color: #fcfaf7 !important;
+  margin: 0.5rem;
+}
+
+.carousel-container {
+  height: 20rem;
+}
+
+.info {
+  width: 20rem;
+  padding: 6px 8px;
+  font: 14px/16px Arial, Helvetica, sans-serif;
+  background: white;
+  background: rgba(255,255,255,0.4);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 5px;
+}
+
+.smaller-info {
+  width: 16rem;
+}
+
+.capitalize-this {
+  text-transform: capitalize;
+}
+
+.lobster-size {
+  width: 15rem;
+}
+
+.badge-temporary {
+  background-color: #FF00FF;
+}
+
+.badge-proposal {
+  background-color: #FF6D05;
+}
+
+.badge-formal {
+  background-color: #FF0101;
+}
+
+.badge-pending {
+  background-color: #A200AB;
+}
+
+.badge-repealed {
+  background-color: #5E4819;
+}
+
+.badge-implementation {
+  background-color: #ECD420;
+}
+
+.badge-image {
+  height: 2rem;
+  width: 2rem;
+}
+
+.badge-lobster-image {
+  height: 2rem;
+  width: 5rem;
+}
+
+.leaflet-control-zoom {
+  display: none;
+}
+
+.no-display {
+  display: none !important;
+}
+
+.close-index {
+  color: red;
+  position: absolute;
+  margin: -0.2rem 0 0 -0.2rem;
+  font-size: x-large;
+  cursor: pointer;
+  z-index: 110;
+}
