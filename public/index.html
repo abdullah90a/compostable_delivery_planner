@@ -86,46 +86,47 @@
           </div>
 
           <!--- Map Controls --->
+<!--          <div class="row justify-content-center">-->
+<!--            <div class="col-8 mb-3 mt-2">-->
+<!--              <input id="cityInput" type="text" class="form-control" placeholder="Where are you?" aria-label="User's City" aria-describedby="button-addon2">-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <div class="row justify-content-center">-->
+<!--            <div class="col-8 mb-2">-->
+<!--              <label id="composter_radius" for="radius">Searching within 500 miles</label>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <div class="row justify-content-center">-->
+<!--            <div class="col-4 mb-3">-->
+<!--              <input type="range" id="radius" name="radius" min="0" max="5000" value="500">-->
+<!--            </div>-->
+<!--          </div>-->
           <div class="row justify-content-center">
-            <div class="col-8 mb-3 mt-2">
-              <input id="cityInput" type="text" class="form-control" placeholder="Where are you?" aria-label="User's City" aria-describedby="button-addon2">
-            </div>
+            <h4 class="be-font mb-3 mt-4">Add Chain to Map</h4>
           </div>
-          <div class="row justify-content-center">
-            <div class="col-8 mb-2">
-              <label id="composter_radius" for="radius">Searching within 500 miles</label>
+          <form enctype="multipart/form-data" id="uploadForm">
+            <div class="row justify-content-center">
+              <div class="col-8 mb-3">
+                  <div class="form-group">
+                    <input type="text" placeholder="Chain Name" class="form-control" name="chainName" id="chainName" aria-describedby="chainNameHelp">
+                    <small id="chainNameHelp" class="form-text text-muted">What's your organization called?</small>
+                  </div>
+                  <div class="form-group">
+                    <input type="file" name="sitesCSV" id="sitesCSV" hidden>
+                    <button class="btn btn-outline-secondary be-btn-green-then-blue" onclick="clickSiteUploadButton()" type="button" id="button-addon-1">Upload Site CSV</button>
+                    <small id="siteCSVHelp" class="form-text text-muted">CSV File containing your sites' data</small>
+                  </div>
+                  <div class="form-group">
+                    <input type="file" name="markerImage" id="markerImage" hidden>
+                    <button class="btn btn-outline-secondary be-btn-green-then-blue" onclick="clickImageUploadButton()" type="button" id="button-addon-2">Upload Marker Image</button>
+                    <small id="markerImageHelp" class="form-text text-muted">Marker image file to plot your sites</small>
+                  </div>
+              </div>
             </div>
-          </div>
-          <div class="row justify-content-center">
-            <div class="col-4 mb-3">
-              <input type="range" id="radius" name="radius" min="0" max="5000" value="500">
+            <div class="row justify-content-center">
+              <button type="submit" class="btn btn-primary">Upload</button>
             </div>
-          </div>
-          <div class="row justify-content-center">
-            <div class="col-8 mb-3">
-              <button class="btn btn-outline-secondary be-btn-green-then-blue" onclick="showAllComposters()" type="button" id="button-addon2">Composters</button>
-            </div>
-          </div>
-          <div class="row justify-content-center">
-            <div class="col-8 mb-3">
-              <button class="btn btn-outline-secondary be-btn-green-then-blue" onclick="showAllBans()" type="button" id="button-addon3">Legislation Statuses</button>
-            </div>
-          </div>
-          <div class="row justify-content-center">
-            <div class="col-8 mb-3">
-              <button class="btn btn-outline-secondary be-btn-green-then-blue" onclick="showAllLobsters()" type="button" id="button-addon4">Red Lobster Locations</button>
-            </div>
-          </div>
-          <div class="row justify-content-center">
-            <div class="col-8 mb-3">
-              <button class="btn btn-outline-secondary be-btn-green-then-blue" onclick="showAllCustomers()" type="button" id="button-addon5">BE Partners</button>
-            </div>
-          </div>
-          <div class="row justify-content-center">
-            <div class="col-8 mb-3">
-              <button class="btn btn-outline-secondary be-btn-green-then-blue" onclick="clearAll()" type="button" id="button-addon6">Clear Map</button>
-            </div>
-          </div>
+          </form>
         </div>
       </div>
 

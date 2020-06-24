@@ -113,10 +113,10 @@ const MARKERS = {
 
 function gotoBlogPost(url) { window.open(url, ''); }
 
-RADIUS_SLIDER.addEventListener('change', evt => {
-  document.getElementById('composter_radius').innerText = `Searching within ${evt.target.value} miles`;
-  showDataFor();
-});
+// RADIUS_SLIDER.addEventListener('change', evt => {
+//   document.getElementById('composter_radius').innerText = `Searching within ${evt.target.value} miles`;
+//   showDataFor();
+// });
 
 const legend = L.control({position: 'topleft'});
 legend.onAdd = () => {
@@ -173,12 +173,12 @@ const createAutocompleteList = () => {
   return cityList;
 };
 
-const CITY_STATE_AUTOCOMPLETE = $('#cityInput')
-CITY_STATE_AUTOCOMPLETE.autocomplete({
-  minLength: 4,
-  select: (event, ui) => showDataFor(ui.item.city),
-  source: createAutocompleteList()
-});
+// const CITY_STATE_AUTOCOMPLETE = $('#cityInput')
+// CITY_STATE_AUTOCOMPLETE.autocomplete({
+//   minLength: 4,
+//   select: (event, ui) => showDataFor(ui.item.city),
+//   source: createAutocompleteList()
+// });
 
 let CITY_TO_USE = undefined;
 function showDataFor(city) {
@@ -249,6 +249,37 @@ function createComposterMarkers(city) {
       MARKERS.composters[index].remove();
     }
   });
+}
+
+const UPLOAD_FORM = document.getElementById("uploadForm");
+UPLOAD_FORM.addEventListener("submit", evt => {
+  evt.preventDefault();
+  evt.stopPropagation();
+
+  const uri = "/upload";
+  const xhr = new XMLHttpRequest();
+  const fd = new FormData();
+
+  xhr.open("POST", uri, true);
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState == 4 && xhr.status == 200) {
+      alert(xhr.responseText); // handle response.
+    }
+  };
+
+  fd.append("chainName", document.getElementById("chainName").value);
+  fd.append('sitesCSV', document.getElementById("sitesCSV").files[0]);
+  fd.append('markerImage', document.getElementById("markerImage").files[0]);
+  // Initiate a multipart/form-data upload
+  xhr.send(fd);
+});
+
+function clickSiteUploadButton() {
+  document.getElementById("sitesCSV").click();
+}
+
+function clickImageUploadButton() {
+  document.getElementById("markerImage").click();
 }
 
 function showAllComposters() {
